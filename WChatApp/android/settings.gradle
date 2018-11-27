@@ -1,0 +1,3 @@
+rootProject.name = 'WChatApp'
+
+include ':app'
