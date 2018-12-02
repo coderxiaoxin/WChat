@@ -1,4 +1,5 @@
 apply plugin: "com.android.application"
+apply plugin: 'com.aliyun.ams.emas-services'
 
 import com.android.build.OutputFile
 

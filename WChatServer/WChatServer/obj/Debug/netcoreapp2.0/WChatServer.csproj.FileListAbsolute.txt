@@ -1,0 +1,11 @@
+G:\project\WChat\WChat\WChatServer\WChatServer\bin\Debug\netcoreapp2.0\WChatServer.deps.json
+G:\project\WChat\WChat\WChatServer\WChatServer\bin\Debug\netcoreapp2.0\WChatServer.runtimeconfig.json
+G:\project\WChat\WChat\WChatServer\WChatServer\bin\Debug\netcoreapp2.0\WChatServer.runtimeconfig.dev.json
+G:\project\WChat\WChat\WChatServer\WChatServer\bin\Debug\netcoreapp2.0\WChatServer.dll
+G:\project\WChat\WChat\WChatServer\WChatServer\obj\Debug\netcoreapp2.0\WChatServer.csprojResolveAssemblyReference.cache
+G:\project\WChat\WChat\WChatServer\WChatServer\obj\Debug\netcoreapp2.0\WChatServer.csproj.CoreCompileInputs.cache
+G:\project\WChat\WChat\WChatServer\WChatServer\obj\Debug\netcoreapp2.0\WChatServer.AssemblyInfoInputs.cache
+G:\project\WChat\WChat\WChatServer\WChatServer\obj\Debug\netcoreapp2.0\WChatServer.AssemblyInfo.cs
+G:\project\WChat\WChat\WChatServer\WChatServer\bin\Debug\netcoreapp2.0\WChatServer.pdb
+G:\project\WChat\WChat\WChatServer\WChatServer\obj\Debug\netcoreapp2.0\WChatServer.dll
+G:\project\WChat\WChat\WChatServer\WChatServer\obj\Debug\netcoreapp2.0\WChatServer.pdb
