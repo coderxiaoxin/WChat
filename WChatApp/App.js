@@ -7,7 +7,7 @@
  */
 
 import React, { Component } from 'react';
-import { Platform,StatusBar, StyleSheet, Text, View } from 'react-native';
+import { Platform,StatusBar, StyleSheet, Text, View,BackHandler } from 'react-native';
 import { createStackNavigator } from 'react-navigation';
 import AppNavigator from './src/route/AppNavigator'
 
