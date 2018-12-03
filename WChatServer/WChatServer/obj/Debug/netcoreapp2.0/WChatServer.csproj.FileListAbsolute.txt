@@ -9,3 +9,16 @@ G:\project\WChat\WChat\WChatServer\WChatServer\obj\Debug\netcoreapp2.0\WChatServ
 G:\project\WChat\WChat\WChatServer\WChatServer\bin\Debug\netcoreapp2.0\WChatServer.pdb
 G:\project\WChat\WChat\WChatServer\WChatServer\obj\Debug\netcoreapp2.0\WChatServer.dll
 G:\project\WChat\WChat\WChatServer\WChatServer\obj\Debug\netcoreapp2.0\WChatServer.pdb
+G:\project\WChat\WChat\WChatServer\WChatServer\bin\Debug\netcoreapp2.0\aliyun-net-sdk-core.dll
+G:\project\WChat\WChat\WChatServer\WChatServer\bin\Debug\netcoreapp2.0\aliyun-net-sdk-push.dll
+G:\project\WChat\WChat\WChatServer\WChatServer\bin\Debug\netcoreapp2.0\WChatDb.dll
+G:\project\WChat\WChat\WChatServer\WChatServer\bin\Debug\netcoreapp2.0\aliyun-net-sdk-core.pdb
+G:\project\WChat\WChat\WChatServer\WChatServer\bin\Debug\netcoreapp2.0\aliyun-net-sdk-push.pdb
+G:\project\WChat\WChat\WChatServer\WChatServer\bin\Debug\netcoreapp2.0\DAL.dll
+G:\project\WChat\WChat\WChatServer\WChatServer\bin\Debug\netcoreapp2.0\Manager.dll
+G:\project\WChat\WChat\WChatServer\WChatServer\bin\Debug\netcoreapp2.0\Store.dll
+G:\project\WChat\WChat\WChatServer\WChatServer\bin\Debug\netcoreapp2.0\DAL.pdb
+G:\project\WChat\WChat\WChatServer\WChatServer\bin\Debug\netcoreapp2.0\Manager.pdb
+G:\project\WChat\WChat\WChatServer\WChatServer\bin\Debug\netcoreapp2.0\Store.pdb
+G:\project\WChat\WChat\WChatServer\WChatServer\bin\Debug\netcoreapp2.0\WChatDb.pdb
+G:\project\WChat\WChat\WChatServer\WChatServer\obj\Debug\netcoreapp2.0\WChatServer.csproj.CopyComplete

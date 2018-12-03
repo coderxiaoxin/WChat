@@ -1702,18 +1702,18 @@
           "lib/netstandard1.3/Microsoft.DotNet.PlatformAbstractions.dll": {}
         }
       },
-      "Microsoft.EntityFrameworkCore/2.1.2": {
+      "Microsoft.EntityFrameworkCore/2.1.4": {
         "type": "package",
         "dependencies": {
-          "Microsoft.EntityFrameworkCore.Abstractions": "2.1.2",
-          "Microsoft.EntityFrameworkCore.Analyzers": "2.1.2",
+          "Microsoft.EntityFrameworkCore.Abstractions": "2.1.4",
+          "Microsoft.EntityFrameworkCore.Analyzers": "2.1.4",
           "Microsoft.Extensions.Caching.Memory": "2.1.1",
           "Microsoft.Extensions.DependencyInjection": "2.1.1",
           "Microsoft.Extensions.Logging": "2.1.1",
           "Remotion.Linq": "2.2.0",
           "System.Collections.Immutable": "1.5.0",
           "System.ComponentModel.Annotations": "4.5.0",
-          "System.Diagnostics.DiagnosticSource": "4.5.0",
+          "System.Diagnostics.DiagnosticSource": "4.5.1",
           "System.Interactive.Async": "3.1.1"
         },
         "compile": {
@@ -1723,7 +1723,7 @@
           "lib/netstandard2.0/Microsoft.EntityFrameworkCore.dll": {}
         }
       },
-      "Microsoft.EntityFrameworkCore.Abstractions/2.1.2": {
+      "Microsoft.EntityFrameworkCore.Abstractions/2.1.4": {
         "type": "package",
         "compile": {
           "lib/netstandard2.0/Microsoft.EntityFrameworkCore.Abstractions.dll": {}
@@ -1732,7 +1732,7 @@
           "lib/netstandard2.0/Microsoft.EntityFrameworkCore.Abstractions.dll": {}
         }
       },
-      "Microsoft.EntityFrameworkCore.Analyzers/2.1.2": {
+      "Microsoft.EntityFrameworkCore.Analyzers/2.1.4": {
         "type": "package"
       },
       "Microsoft.EntityFrameworkCore.Design/2.0.2": {
@@ -3652,7 +3652,7 @@
           "ref/netstandard1.3/System.Diagnostics.Debug.dll": {}
         }
       },
-      "System.Diagnostics.DiagnosticSource/4.5.0": {
+      "System.Diagnostics.DiagnosticSource/4.5.1": {
         "type": "package",
         "compile": {
           "lib/netstandard1.3/System.Diagnostics.DiagnosticSource.dll": {}
@@ -5133,6 +5133,57 @@
         "runtime": {
           "lib/netstandard1.3/Microsoft.WindowsAzure.Storage.dll": {}
         }
+      },
+      "DAL/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v2.0",
+        "compile": {
+          "bin/placeholder/DAL.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/DAL.dll": {}
+        }
+      },
+      "Manager/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v2.0",
+        "dependencies": {
+          "DAL": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Manager.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Manager.dll": {}
+        }
+      },
+      "Store/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v2.0",
+        "dependencies": {
+          "DAL": "1.0.0",
+          "Microsoft.EntityFrameworkCore": "2.1.4",
+          "WChatDb": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Store.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Store.dll": {}
+        }
+      },
+      "WChatDb/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v2.0",
+        "dependencies": {
+          "MySql.Data.EntityFrameworkCore": "8.0.13"
+        },
+        "compile": {
+          "bin/placeholder/WChatDb.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/WChatDb.dll": {}
+        }
       }
     }
   },
@@ -6487,38 +6538,38 @@
         "microsoft.dotnet.platformabstractions.nuspec"
       ]
     },
-    "Microsoft.EntityFrameworkCore/2.1.2": {
-      "sha512": "GxWAl2THJjOGxyLAib7b84Qnd9RzSTiVKLADWWXB7y8bz6WY71r75kBQxdlT7cMR4hjH/Z72xYaDUWD+RSn8aQ==",
+    "Microsoft.EntityFrameworkCore/2.1.4": {
+      "sha512": "72l8hbaJ5cXxZLCFeo46MDnvU8XJiDRNh1YQPzAlqVAlQrUwSVojYbJyOE7vbWqsb8rRqQYJ6NsmgPdUv/NKzw==",
       "type": "package",
-      "path": "microsoft.entityframeworkcore/2.1.2",
+      "path": "microsoft.entityframeworkcore/2.1.4",
       "files": [
         ".signature.p7s",
         "lib/netstandard2.0/Microsoft.EntityFrameworkCore.dll",
         "lib/netstandard2.0/Microsoft.EntityFrameworkCore.xml",
-        "microsoft.entityframeworkcore.2.1.2.nupkg.sha512",
+        "microsoft.entityframeworkcore.2.1.4.nupkg.sha512",
         "microsoft.entityframeworkcore.nuspec"
       ]
     },
-    "Microsoft.EntityFrameworkCore.Abstractions/2.1.2": {
-      "sha512": "/uNdUYb9eP5ZaMUx6Ql8kzHUOKKaIxjDPFmtgD0rBPp3Kx8QPes1MOmCWlcHDY/bitjt4fQL6m45Btc4IiwYzA==",
+    "Microsoft.EntityFrameworkCore.Abstractions/2.1.4": {
+      "sha512": "5Vc1zdCq7p+E/8ndJnTKHebJeqSC/1gb4hXDPi7UHdqURAxWl3lZV5+79x/dSfO/P6n/sEz5fURYGOMDoreXUA==",
       "type": "package",
-      "path": "microsoft.entityframeworkcore.abstractions/2.1.2",
+      "path": "microsoft.entityframeworkcore.abstractions/2.1.4",
       "files": [
         ".signature.p7s",
         "lib/netstandard2.0/Microsoft.EntityFrameworkCore.Abstractions.dll",
         "lib/netstandard2.0/Microsoft.EntityFrameworkCore.Abstractions.xml",
-        "microsoft.entityframeworkcore.abstractions.2.1.2.nupkg.sha512",
+        "microsoft.entityframeworkcore.abstractions.2.1.4.nupkg.sha512",
         "microsoft.entityframeworkcore.abstractions.nuspec"
       ]
     },
-    "Microsoft.EntityFrameworkCore.Analyzers/2.1.2": {
-      "sha512": "E69ng8rH5o+hwxkdVBkgnn/I+F1OiIy5I0cRtlEVYj35LxtEswQ0DD5lnCne3mw6JqURfUtOXQj8804stYTWuA==",
+    "Microsoft.EntityFrameworkCore.Analyzers/2.1.4": {
+      "sha512": "cYjXickepORM4UmNdqdZ3l74xhG5OHWMDxsFlqHJGm0qxLAHv5GAI2dKkkGslrjyaPYnfRW3JhAWubBWBt0XUg==",
       "type": "package",
-      "path": "microsoft.entityframeworkcore.analyzers/2.1.2",
+      "path": "microsoft.entityframeworkcore.analyzers/2.1.4",
       "files": [
         ".signature.p7s",
         "analyzers/dotnet/cs/Microsoft.EntityFrameworkCore.Analyzers.dll",
-        "microsoft.entityframeworkcore.analyzers.2.1.2.nupkg.sha512",
+        "microsoft.entityframeworkcore.analyzers.2.1.4.nupkg.sha512",
         "microsoft.entityframeworkcore.analyzers.nuspec"
       ]
     },
@@ -9487,10 +9538,10 @@
         "system.diagnostics.debug.nuspec"
       ]
     },
-    "System.Diagnostics.DiagnosticSource/4.5.0": {
-      "sha512": "1cpU+cbnj4zamChxbdZ+06lkYJjDs46XoIw8EQN/cicVWSW3y9eRF5mLnwRLUQ5LsVpCVa/1vA70B0uEMLfkIg==",
+    "System.Diagnostics.DiagnosticSource/4.5.1": {
+      "sha512": "m86SgxAIi5j0iGzx2y1LrcMcopIYfinfcojyQ9CcNRy3MZvi0dVuDlMj2M7kV6MMGSunqZ+OnQ+rQbxWafFBaw==",
       "type": "package",
-      "path": "system.diagnostics.diagnosticsource/4.5.0",
+      "path": "system.diagnostics.diagnosticsource/4.5.1",
       "files": [
         ".signature.p7s",
         "LICENSE.TXT",
@@ -9505,7 +9556,7 @@
         "lib/netstandard1.3/System.Diagnostics.DiagnosticSource.xml",
         "lib/portable-net45+win8+wpa81/System.Diagnostics.DiagnosticSource.dll",
         "lib/portable-net45+win8+wpa81/System.Diagnostics.DiagnosticSource.xml",
-        "system.diagnostics.diagnosticsource.4.5.0.nupkg.sha512",
+        "system.diagnostics.diagnosticsource.4.5.1.nupkg.sha512",
         "system.diagnostics.diagnosticsource.nuspec",
         "useSharedDesignerContext.txt",
         "version.txt"
@@ -13419,14 +13470,39 @@
         "windowsazure.storage.8.1.4.nupkg.sha512",
         "windowsazure.storage.nuspec"
       ]
+    },
+    "DAL/1.0.0": {
+      "type": "project",
+      "path": "../DAL/DAL.csproj",
+      "msbuildProject": "../DAL/DAL.csproj"
+    },
+    "Manager/1.0.0": {
+      "type": "project",
+      "path": "../Manager/Manager.csproj",
+      "msbuildProject": "../Manager/Manager.csproj"
+    },
+    "Store/1.0.0": {
+      "type": "project",
+      "path": "../Store/Store.csproj",
+      "msbuildProject": "../Store/Store.csproj"
+    },
+    "WChatDb/1.0.0": {
+      "type": "project",
+      "path": "../WChatDb/WChatDb.csproj",
+      "msbuildProject": "../WChatDb/WChatDb.csproj"
     }
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v2.0": [
+      "DAL >= 1.0.0",
+      "Manager >= 1.0.0",
       "Microsoft.AspNetCore.All >= 2.0.6",
+      "Microsoft.EntityFrameworkCore >= 2.1.4",
       "Microsoft.NETCore.App >= 2.0.0",
       "Microsoft.VisualStudio.Web.CodeGeneration.Design >= 2.0.3",
-      "MySql.Data.EntityFrameworkCore >= 8.0.13"
+      "MySql.Data.EntityFrameworkCore >= 8.0.13",
+      "Store >= 1.0.0",
+      "WChatDb >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -13458,7 +13534,20 @@
       },
       "frameworks": {
         "netcoreapp2.0": {
-          "projectReferences": {}
+          "projectReferences": {
+            "G:\\project\\WChat\\WChat\\WChatServer\\DAL\\DAL.csproj": {
+              "projectPath": "G:\\project\\WChat\\WChat\\WChatServer\\DAL\\DAL.csproj"
+            },
+            "G:\\project\\WChat\\WChat\\WChatServer\\Manager\\Manager.csproj": {
+              "projectPath": "G:\\project\\WChat\\WChat\\WChatServer\\Manager\\Manager.csproj"
+            },
+            "G:\\project\\WChat\\WChat\\WChatServer\\Store\\Store.csproj": {
+              "projectPath": "G:\\project\\WChat\\WChat\\WChatServer\\Store\\Store.csproj"
+            },
+            "G:\\project\\WChat\\WChat\\WChatServer\\WChatDb\\WChatDb.csproj": {
+              "projectPath": "G:\\project\\WChat\\WChat\\WChatServer\\WChatDb\\WChatDb.csproj"
+            }
+          }
         }
       },
       "warningProperties": {
@@ -13473,6 +13562,10 @@
           "Microsoft.AspNetCore.All": {
             "target": "Package",
             "version": "[2.0.6, )"
+          },
+          "Microsoft.EntityFrameworkCore": {
+            "target": "Package",
+            "version": "[2.1.4, )"
           },
           "Microsoft.NETCore.App": {
             "target": "Package",

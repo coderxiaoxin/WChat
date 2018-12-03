@@ -3,9 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27428.2037
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WChatServer", "WChatServer\WChatServer.csproj", "{A2866E52-7051-400B-8E64-80E5B09511B6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WChatServer", "WChatServer\WChatServer.csproj", "{A2866E52-7051-400B-8E64-80E5B09511B6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Manager", "Manager\Manager.csproj", "{FE16C560-989A-4542-9653-9F6B5AE773A6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Manager", "Manager\Manager.csproj", "{FE16C560-989A-4542-9653-9F6B5AE773A6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Store", "Store\Store.csproj", "{9E5D4BB9-7AFD-4881-9B8A-8147637AA622}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DAL", "DAL\DAL.csproj", "{97A257E3-80D9-4712-8580-2B90A4403B70}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WChatDb", "WChatDb\WChatDb.csproj", "{D9B4A0C5-F917-49CB-829C-863EE277B197}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +27,18 @@ Global
 		{FE16C560-989A-4542-9653-9F6B5AE773A6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FE16C560-989A-4542-9653-9F6B5AE773A6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FE16C560-989A-4542-9653-9F6B5AE773A6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9E5D4BB9-7AFD-4881-9B8A-8147637AA622}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9E5D4BB9-7AFD-4881-9B8A-8147637AA622}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9E5D4BB9-7AFD-4881-9B8A-8147637AA622}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9E5D4BB9-7AFD-4881-9B8A-8147637AA622}.Release|Any CPU.Build.0 = Release|Any CPU
+		{97A257E3-80D9-4712-8580-2B90A4403B70}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{97A257E3-80D9-4712-8580-2B90A4403B70}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{97A257E3-80D9-4712-8580-2B90A4403B70}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{97A257E3-80D9-4712-8580-2B90A4403B70}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D9B4A0C5-F917-49CB-829C-863EE277B197}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D9B4A0C5-F917-49CB-829C-863EE277B197}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D9B4A0C5-F917-49CB-829C-863EE277B197}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D9B4A0C5-F917-49CB-829C-863EE277B197}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

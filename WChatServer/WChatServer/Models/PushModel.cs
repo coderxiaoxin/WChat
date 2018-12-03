@@ -22,6 +22,10 @@ namespace WChatServer.Models
         /// </summary>
         public string Account { get; set; }
         /// <summary>
+        /// 标题
+        /// </summary>
+        public string Title { get; set; }
+        /// <summary>
         /// 消息内容
         /// </summary>
         public string Msg { get; set; }
