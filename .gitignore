@@ -57,3 +57,7 @@ buck-out/
 WChatApp/android/app/aliyun-emas-services.json
 WChatServer/WChatServer/appsettings.json
 
+# c#
+bin
+obj
+.vs
