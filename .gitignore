@@ -56,3 +56,4 @@ buck-out/
 *.jsbundle
 WChatApp/android/app/aliyun-emas-services.json
 WChatServer/WChatServer/appsettings.json
+
