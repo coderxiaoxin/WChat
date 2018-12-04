@@ -1,9 +1,0 @@
-G:\project\WChat\WChat\WChatServer\WChatDb\bin\Debug\netcoreapp2.0\WChatDb.deps.json
-G:\project\WChat\WChat\WChatServer\WChatDb\bin\Debug\netcoreapp2.0\WChatDb.dll
-G:\project\WChat\WChat\WChatServer\WChatDb\obj\Debug\netcoreapp2.0\WChatDb.csproj.CoreCompileInputs.cache
-G:\project\WChat\WChat\WChatServer\WChatDb\obj\Debug\netcoreapp2.0\WChatDb.AssemblyInfoInputs.cache
-G:\project\WChat\WChat\WChatServer\WChatDb\obj\Debug\netcoreapp2.0\WChatDb.AssemblyInfo.cs
-G:\project\WChat\WChat\WChatServer\WChatDb\bin\Debug\netcoreapp2.0\WChatDb.pdb
-G:\project\WChat\WChat\WChatServer\WChatDb\obj\Debug\netcoreapp2.0\WChatDb.csprojResolveAssemblyReference.cache
-G:\project\WChat\WChat\WChatServer\WChatDb\obj\Debug\netcoreapp2.0\WChatDb.dll
-G:\project\WChat\WChat\WChatServer\WChatDb\obj\Debug\netcoreapp2.0\WChatDb.pdb
