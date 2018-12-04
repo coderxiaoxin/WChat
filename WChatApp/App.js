@@ -7,52 +7,58 @@
  */
 
 import React, { Component } from 'react';
-import { Platform,StatusBar, StyleSheet, Text, View,BackHandler } from 'react-native';
+import { Platform, StatusBar, StyleSheet, Text, View, BackHandler, DeviceEventEmitter } from 'react-native';
 import { createStackNavigator } from 'react-navigation';
 import AppNavigator from './src/route/AppNavigator'
+var {NativeModules}=require('react-native');
+var MPush = NativeModules.MPush;
+
 
 type Props = {};
 export default class App extends Component<Props> {
+  constructor(props){
+    super(props)
+    this.state={
+      deviceIdBtnTitle:"123"
+    }
+  }
   render() {
     return (
       <View style={styles.container}>
-          {Platform.OS === 'ios' && <StatusBar barStyle="default" />}
-          <AppNavigator />
-        </View>
+        {Platform.OS === 'ios' && <StatusBar barStyle="default" />}
+        {/* <AppNavigator /> */}
+        <Text>456</Text>
+        <Text>{this.state.deviceIdBtnTitle}</Text>
+      </View>
     );
   }
-  componentWillUnmount() {//移除返回按钮事件监听
-    this.backHandler && this.backHandler.remove();
-  }
-  componentDidMount() {//注册返回按钮事件监听
-    this.backHandler = BackHandler.addEventListener('hardwareBackPress',
-      this.backOption);
-  }
-  backOption = () => {
-    if (current == true) {//如果是在首页
-      if (lastBackPressed && lastBackPressed + 2000 >= Date.now()) {
-        //最近2秒内按过back键，可以退出应用。
-        BackHandler.exitApp();
-        return false;
-      }
 
-      lastBackPressed = Date.now();
-      ToastAndroid.show('再按一次退出', ToastAndroid.SHORT);
-      return true;
-    } else {
-      if (this.props && this.props.navigation) {
-        this.props.navigator.pop();
-      }
-    }
+  getDeviceId() {
+    var that = this;
+    MPush.getDeviceId(function(args) {
+        that.setState({
+            deviceIdBtnTitle: args
+        });
+    });
+}
+  //绑定事件
+  componentDidMount() {
+    DeviceEventEmitter.addListener('onMessage', this.onMessage);
+    DeviceEventEmitter.addListener('onNotification', this.onNotification);
+    this.getDeviceId();
   }
-  onNavigationStateChange(prevState, newState, action)
-    {//注册路由改变监听事件
-        if (newState && newState.routes[newState.routes.length - 1].routeName == 'homePage') {//如果当前路由是Home页面，则需要处理安卓物理返回按键。
-            current = true;
-        } else {
-            current = false;
-        }
-    }
+  //解绑事件
+  componentWillUnmount() {
+    DeviceEventEmitter.removeListener('onMessage', this.onMessage);
+    DeviceEventEmitter.removeListener('onNotification', this.onNotification);
+  }
+  //事件处理逻辑
+  onMessage(e) {
+    alert("Message Received. Title:" + e.title + ", Content:" + e.content);
+  }
+  onNotification(e) {
+    alert("Notification Received.Title:" + e.title + ", Content:" + e.content);
+  }
 }
 
 const styles = StyleSheet.create({

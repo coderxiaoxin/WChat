@@ -113,6 +113,7 @@ namespace Store
             request.TargetValue = TargetValue;
             request.Title = Title;
             request.Body = Content;
+            request.AndroidNotificationChannel = "systemmsg";
             try
             {
                 // Initiate the request and get the response
