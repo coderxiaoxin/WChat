@@ -5,6 +5,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\DAL\DAL.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Reference Include="aliyun-net-sdk-core">
       <HintPath>..\dll\aliyun-net-sdk-core.dll</HintPath>
     </Reference>

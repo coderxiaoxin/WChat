@@ -2,12 +2,15 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using DAL;
+using Manager;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using WChatServer.DBModel;
+using Store;
+using WChatDb;
 
 namespace WChatServer
 {
@@ -27,6 +30,16 @@ namespace WChatServer
             var connectstring = Configuration.GetConnectionString("WChat");
             services.AddDbContext<WChatDbContext>(options=> {
                 options.UseMySQL(connectstring);
+            });
+            var AliPush = Configuration.GetSection("AliPush");
+            var AppId = AliPush.GetValue<long>("AppId");
+            var AccessKeyId = AliPush.GetValue<string>("AccessKeyId");
+            var AccessKeySecret = AliPush.GetValue<string>("AccessKeySecret");
+            var RegionId = AliPush.GetValue<string>("RegionId");
+            services.AddSingleton<PushManager>(option=> {
+                List<IPushStore> list = new List<IPushStore>();
+                list.Add(new AppPushStore(services.Where(a=>a.ServiceType.Equals(typeof(WChatDbContext))).FirstOrDefault().ImplementationInstance as WChatDbContext, AccessKeyId, AccessKeySecret, RegionId,AppId));
+                return new PushManager(list);
             });
         }
 
