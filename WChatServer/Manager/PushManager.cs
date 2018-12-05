@@ -13,6 +13,11 @@ namespace Manager
             this.pushStores = pushStores;
         }
 
+        public PushManager()
+        {
+            this.pushStores = new List<IPushStore>();
+        }
+
         public List<IPushStore> pushStores { get; set; }
 
         public async Task Push(string Account, string Title, string Content)

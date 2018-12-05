@@ -54,3 +54,10 @@ buck-out/
 
 # Bundle artifact
 *.jsbundle
+WChatApp/android/app/aliyun-emas-services.json
+WChatServer/WChatServer/appsettings.json
+
+# c#
+bin
+obj
+.vs
