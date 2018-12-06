@@ -9,9 +9,10 @@
 import React, { Component } from 'react';
 import { Platform, StatusBar, StyleSheet, Text, View, BackHandler, DeviceEventEmitter } from 'react-native';
 import { createStackNavigator } from 'react-navigation';
-import AppNavigator from './src/route/AppNavigator';
+import AppNavigator from './src/route/AppNavigator'
 var {NativeModules}=require('react-native');
 var MPush = NativeModules.MPush;
+import testAppNativeModules from './src/route/test'
 
 export default class App extends Component {
   constructor(props){
@@ -22,7 +23,12 @@ export default class App extends Component {
   }
   render() {
     return (
-        <AppNavigator style={styles.container}/>
+      <View style={styles.container}>
+        {Platform.OS === 'ios' && <StatusBar barStyle="default" />}
+        <testAppNativeModules />
+        {/* <Text>456</Text>
+        <Text>{this.state.deviceIdBtnTitle}</Text> */}
+      </View>
     );
   }
   //绑定事件
