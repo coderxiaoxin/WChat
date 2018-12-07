@@ -62,3 +62,8 @@ bin
 obj
 .vs
 WChatServer/.vs
+.vs
+/WChatServer/DAL/obj
+/WChatServer/DAL/bin
+/WChatServer/Store/obj
+/WChatServer/Store/bin
