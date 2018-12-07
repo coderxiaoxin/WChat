@@ -9,5 +9,5 @@ var AppNavigator= createSwitchNavigator({
   Main: MainTabNavigator,
 });
 
-const AppContainer = createAppContainer(AppNavigator);
+const AppContainer = createAppContainer(MainTabNavigator);
 export default AppContainer;

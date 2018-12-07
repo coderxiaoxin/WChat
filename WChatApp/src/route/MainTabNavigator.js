@@ -1,9 +1,10 @@
 import HomeScreen from '../screens/HomeScreen';
-import ContactScreen from '../screens/ContactScreen'
+import ContactScreen from '../screens/ContactScreen';
+import PluginScreen from '../screens/PluginScreen';
 import React from 'react';
 import { Platform } from 'react-native';
 import { createStackNavigator, createBottomTabNavigator } from 'react-navigation';
-import TabBarIcon from '../compos/TabBarIcon'
+import TabBarIcon from '../compos/TabBarIcon';
 
 const HomeStack = createStackNavigator({
   Home: HomeScreen
@@ -14,11 +15,8 @@ HomeStack.navigationOptions = {
   tabBarIcon: ({ focused }) => (
     <TabBarIcon
       focused={focused}
-      name={
-        Platform.OS === 'ios'
-          ? `ios-information-circle${focused ? '' : '-outline'}`
-          : 'md-information-circle'
-      }
+      img={require('../assets/img/tabBarIcon/chat.png')}
+      focusimg={require('../assets/img/tabBarIcon/chat_focus.png')}
     />
   ),
 };
@@ -32,16 +30,29 @@ ContactStack.navigationOptions = {
   tabBarIcon: ({ focused }) => {
     <TabBarIcon
       focused={focused}
-      name={
-        Platform.OS === 'ios'
-          ? `ios-information-circle${focused ? '' : '-outline'}`
-          : 'md-information-circle'
-      }
+      img={require('../assets/img/tabBarIcon/contact.png')}
+      focusimg={require('../assets/img/tabBarIcon/contact_focus.png')}
+    />
+  }
+}
+
+const PluginStack=createStackNavigator({
+  Plugin:PluginScreen
+})
+
+PluginStack.navigationOptions={
+  tabBarLabel:'发现',
+  tabBarIcon: ({ focused }) => {
+    <TabBarIcon
+      focused={focused}
+      img={require('../assets/img/tabBarIcon/contact.png')}
+      focusimg={require('../assets/img/tabBarIcon/contact_focus.png')}
     />
   }
 }
 
 export default createBottomTabNavigator({
-  Home:HomeStack,
-  Contact:ContactStack
+  HomeStack,
+  ContactStack,
+  PluginStack
 })
