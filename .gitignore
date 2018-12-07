@@ -61,3 +61,4 @@ WChatServer/WChatServer/appsettings.json
 bin
 obj
 .vs
+WChatServer/.vs
