@@ -67,3 +67,6 @@ WChatServer/.vs
 /WChatServer/DAL/bin
 /WChatServer/Store/obj
 /WChatServer/Store/bin
+.vs
+obj
+obj
