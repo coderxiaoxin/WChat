@@ -119,3 +119,5 @@ bin
 /WChatServer/Store/obj/Store.csproj.nuget.cache
 /WChatServer/Store/obj/Store.csproj.nuget.g.props
 /WChatServer/Store/obj/Store.csproj.nuget.g.targets
+*/bin/
+*/obj/
