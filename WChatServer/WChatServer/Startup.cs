@@ -41,6 +41,7 @@ namespace WChatServer
                     return new AppPushStore(option.GetRequiredService<WChatDbContext>(), AccessKeyId, AccessKeySecret, RegionId, AppId);
                 });
             });
+            
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

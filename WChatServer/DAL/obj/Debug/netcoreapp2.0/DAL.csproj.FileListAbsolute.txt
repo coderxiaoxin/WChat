@@ -1,9 +1,0 @@
-G:\project\WChat\WChat\WChatServer\DAL\bin\Debug\netcoreapp2.0\DAL.deps.json
-G:\project\WChat\WChat\WChatServer\DAL\bin\Debug\netcoreapp2.0\DAL.dll
-G:\project\WChat\WChat\WChatServer\DAL\bin\Debug\netcoreapp2.0\DAL.pdb
-G:\project\WChat\WChat\WChatServer\DAL\obj\Debug\netcoreapp2.0\DAL.csprojResolveAssemblyReference.cache
-G:\project\WChat\WChat\WChatServer\DAL\obj\Debug\netcoreapp2.0\DAL.csproj.CoreCompileInputs.cache
-G:\project\WChat\WChat\WChatServer\DAL\obj\Debug\netcoreapp2.0\DAL.AssemblyInfoInputs.cache
-G:\project\WChat\WChat\WChatServer\DAL\obj\Debug\netcoreapp2.0\DAL.AssemblyInfo.cs
-G:\project\WChat\WChat\WChatServer\DAL\obj\Debug\netcoreapp2.0\DAL.dll
-G:\project\WChat\WChat\WChatServer\DAL\obj\Debug\netcoreapp2.0\DAL.pdb
