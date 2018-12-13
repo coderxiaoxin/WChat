@@ -1,7 +1,8 @@
 import React from 'react';
-import { Platform, View, Text,StyleSheet,StatusBar,FlatList,TouchableOpacity } from 'react-native';
+import { Platform, View, Text,Image,StyleSheet,StatusBar,FlatList,TouchableOpacity } from 'react-native';
 import {MonoText} from '../compos/MonoText'
 import Store from '../store/ChatStore'
+import Layout from "../compos/Layout"
 
 export default class HomeScreen extends React.Component {
     constructor(props) {
@@ -10,6 +11,23 @@ export default class HomeScreen extends React.Component {
             ChatList:[],
             title:"聊天"
         }
+        this.loadChatList();
+    }
+
+    loadChatList(){
+        // {
+        //     id:"123",
+        //     nickName:"系统消息",
+        //     lastMessage:"123456",
+        //     icon:require('../assets/img/tabBarIcon/chat.png'),
+        //     time:"2018-12-13 20:31",
+        //     unReadNum:10,
+        //     noNotice:true
+        // }
+        var self=this;
+        Store._noIdLoad("chat",null,null,(res)=>{
+            self.state.ChatList=res;
+        },err=>{});
     }
 
     static navigationOptions = {
@@ -42,26 +60,26 @@ export default class HomeScreen extends React.Component {
         )
     }
 
-    _renderRowListView(){
+    _renderRowListView(rowData){
         //const { navigate } = this.props.navigation;
         return (
-                <View style={{marginTop:2,height:70}} key={rowData.id}>
+                <View style={{marginTop:2,height:70,borderBottomWidth:1,borderBottomColor:"#ccc",marginLeft:10,marginRight:10}} key={rowData.id}>
                     <TouchableOpacity style={styles.message} onPress={() => {
                         navigate("Chat",{rowData:rowData });
                     }}>
                         <View style={{flex: 1, flexDirection:"row",height:60,alignItems:'center',justifyContent: 'space-between',}}>
                             <View style={{flexDirection:"row",}}>
                                 <View style={{width:60}}>
-                                    <Image resizeMode="contain" style={{height:60}} source={rowData.icon}>
+                                    <Image resizeMode="contain" style={{height:50,width:50}} source={rowData.icon}>
                                     </Image>
                                 </View>
                                 <View style={{ flexDirection:"column",}}>
                                     <View style={styles.rowFull}>
-                                        <Text numberOfLines={1} style={{color: "#000",fontSize:16,width:getWidth-200}}>{rowData.nickName}</Text>
+                                        <Text numberOfLines={1} style={{color: "#000",fontSize:16,width:Layout.window.width-200}}>{rowData.nickName}</Text>
                                         <Text style={{color: "#abaaa6"}}>{rowData.time}</Text>
                                     </View>
                                     <View style={[styles.rowFull,{marginRight:10}]}>
-                                        <Text numberOfLines={1} style={{color: "#abaaa6",marginTop:10,width:getWidth-120}}>{rowData.lastMessage}</Text>
+                                        <Text numberOfLines={1} style={{color: "#abaaa6",marginTop:10,width:Layout.window.width-120}}>{rowData.lastMessage}</Text>
                                         <View style={{marginTop:5,alignItems:"flex-end"}}>
                                             {
                                                 rowData.unReadNum==0?(null):rowData.noNotice?( <View style={[styles.noNotice]}>

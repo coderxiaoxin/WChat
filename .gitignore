@@ -121,3 +121,4 @@ bin
 /WChatServer/Store/obj/Store.csproj.nuget.g.targets
 */bin/
 */obj/
+*/.vs/

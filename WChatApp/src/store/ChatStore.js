@@ -7,11 +7,11 @@ export default class ChatSotre {
 
 
     /**
-     key:保存的key值
-     object：保存的value
-     expires：有效时间，
+     * 保存数据
+     * @param {*} key 保存的key值
+     * @param {*} object 保存的value
+     * @param {*} expires 有效时间
      */
-
     static saveExpires(key, object, expires) {
 
         Store.save({
@@ -23,6 +23,13 @@ export default class ChatSotre {
         });
 
     }
+    /**
+     * 保存数据
+     * @param {*} key 
+     * @param {*} id 
+     * @param {*} object 
+     * @param {*} expires 过期时间，如果null永不过期
+     */
     static saveIDExpires(key, id, object, expires) {
         Store.save({
             key: key,  // 注意:请不要在key中使用_下划线符号!
@@ -34,17 +41,29 @@ export default class ChatSotre {
         });
 
     }
-
+    /**
+     * 保存数据，默认过期时间
+     * @param {*} key 
+     * @param {*} object 
+     */
     static save(key, object) {
         this.saveExpires(key, object, defaultExpires);
     }
-
+    /**
+     * 移除key对应的数据
+     * @param {*} key 
+     */
     static _remove(key) {
         // 删除单个数据
         Store.remove({
             key: key,
         });
     }
+    /**
+     * 移除key下对应ID的值
+     * @param {*} key 
+     * @param {*} id 
+     */
     static _removeID(key, id) {
         // 删除单个数据
         Store.remove({
@@ -52,11 +71,17 @@ export default class ChatSotre {
             id: id
         });
     }
+    /**
+     * 移除所有数据
+     */
     static _removeAll() {
         // 移除所有"key-id"数据（但会保留只有key的数据）
         Store.clearMap();
     }
-
+    /**
+     * 清楚key下的所有数据
+     * @param {*} key 
+     */
     static _clearDataByKey(key) {
         // !! 清除某个key下的所有数据
         Store.clearMapForKey(key);
@@ -65,12 +90,19 @@ export default class ChatSotre {
     /**
      查询数据
      */
-
     static _load(key, callBack, errorCallBack) {
         this._idLoad(key, null, null, null, callBack, errorCallBack);
     }
 
-    //有id参数的查询数据
+    /**
+     * 有id参数的查询数据
+     * @param {*} key 
+     * @param {*} id 
+     * @param {*} params 
+     * @param {*} someFlag 
+     * @param {*} callBack 
+     * @param {*} errorCallBack 
+     */
     static _idLoad(key, id, params, someFlag, callBack, errorCallBack) {
 
         Store.load({
@@ -105,7 +137,14 @@ export default class ChatSotre {
             }
         });
     }
-    //没有参数的查询数据
+    /**
+     * 没有参数的查询数据
+     * @param {*} key 
+     * @param {*} params 
+     * @param {*} someFlag 
+     * @param {*} callBack 
+     * @param {*} errorCallBack 
+     */
     static _noIdLoad(key, params, someFlag, callBack, errorCallBack) {
 
         Store.load({
@@ -141,7 +180,12 @@ export default class ChatSotre {
         });
     }
 
-    // 获取某个key下的所有id(仅key-id数据)
+    /**
+     * 获取某个key下的所有id(仅key-id数据)
+     * @param {*} key 
+     * @param {*} callBack 
+     * @param {*} errorCallBack 
+     */
     static getIdsForKey(key, callBack, errorCallBack) {
         Store.getIdsForKey(key).then(ids => {
             callBack(ids)
@@ -151,7 +195,12 @@ export default class ChatSotre {
             errorCallBack(err.name)
         });
     }
-    //获取某个key下的所有数据(仅key-id数据)
+    /**
+     * 获取某个key下的所有数据(仅key-id数据)
+     * @param {*} key 
+     * @param {*} callBack 
+     * @param {*} errorCallBack 
+     */
     static getAllDataForKey(key, callBack, errorCallBack) {
         Store.getAllDataForKey(key).then(users => {
             callBack(users)
@@ -173,7 +222,10 @@ export default class ChatSotre {
 
         });
     }
-    //// 会在需要时分别调用相应的sync方法，最后统一返回一个有序数组。
+    /**
+     * 会在需要时分别调用相应的sync方法，最后统一返回一个有序数组。
+     * @param {*} keys 
+     */
     static getBatchData(keys) {
         Store.getBatchData(keys)
             .then(results => {
@@ -189,7 +241,13 @@ export default class ChatSotre {
 
             });
     }
-    //根据key和一个id数组来读取批量数据
+    /**
+     * 根据key和一个id数组来读取批量数据
+     * @param {*} key 
+     * @param {*} ids 
+     * @param {*} callBack 
+     * @param {*} errorCallBack 
+     */
     static getBatchDataWithIds(key, ids, callBack, errorCallBack) {
         Store.getBatchDataWithIds({
             key: key,

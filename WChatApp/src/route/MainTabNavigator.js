@@ -1,6 +1,7 @@
 import HomeScreen from '../screens/HomeScreen';
 import ContactScreen from '../screens/ContactScreen';
 import PluginScreen from '../screens/PluginScreen';
+import MyScreen from '../screens/MyScreen'
 import React from 'react';
 import { Platform } from 'react-native';
 import { createStackNavigator, createBottomTabNavigator } from 'react-navigation';
@@ -51,8 +52,24 @@ PluginStack.navigationOptions={
   }
 }
 
+const MyStack=createStackNavigator({
+  My:MyScreen
+})
+
+MyStack.navigationOptions={
+  tabBarLabel:'我',
+  tabBarIcon: ({ focused }) => {
+    <TabBarIcon
+      focused={focused}
+      img={require('../assets/img/tabBarIcon/my.png')}
+      focusimg={require('../assets/img/tabBarIcon/my_focus.png')}
+    />
+  }
+}
+
 export default createBottomTabNavigator({
   HomeStack,
   ContactStack,
-  PluginStack
+  PluginStack,
+  MyStack
 })
