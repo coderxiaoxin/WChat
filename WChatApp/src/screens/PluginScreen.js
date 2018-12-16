@@ -7,7 +7,8 @@ import {
     Text,
     TouchableOpacity,
     View,
-    FlatList
+    FlatList,
+    StatusBar
 } from 'react-native';
 import Layout from '../compos/Layout'
 import { MonoText } from '../compos/MonoText';
@@ -45,6 +46,15 @@ export default class PluginScreen extends React.Component {
     render() {
         return (
             <View>
+            <StatusBar
+                translucent={false}
+                hidden={false}
+                animated={true}
+                barStyle={'light-content'}
+                ref={(c) => this.statusBar = c}
+                backgroundColor={'black'}
+                StatusBarAnimation={'slide  '}
+            />
                 <ScrollView style={style.contains}>
                     {
                         this.state.PluginGroup.map(item=>{

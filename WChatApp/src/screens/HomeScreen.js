@@ -3,6 +3,7 @@ import { Platform, View, Text,Image,StyleSheet,StatusBar,FlatList,TouchableOpaci
 import {MonoText} from '../compos/MonoText'
 import Store from '../store/ChatStore'
 import Layout from "../compos/Layout"
+import ChatScreen from './ChatScreen'
 
 export default class HomeScreen extends React.Component {
     constructor(props) {
@@ -26,26 +27,48 @@ export default class HomeScreen extends React.Component {
         // }
         var self=this;
         Store._noIdLoad("chat",null,null,(res)=>{
-            self.state.ChatList=res;
-        },err=>{});
+            //self.state.ChatList=res;
+            self.state.ChatList=[{
+                id:"123",
+                nickName:"系统消息",
+                lastMessage:"123456",
+                icon:require('../assets/img/tabBarIcon/chat.png'),
+                time:"2018-12-13 20:31",
+                unReadNum:10,
+                noNotice:true
+            }]
+        },err=>{
+            //alert("111："+err);
+            self.setState({
+                ChatList:[{
+                    id:"123",
+                    nickName:"系统消息",
+                    lastMessage:"123456",
+                    icon:require('../assets/img/tabBarIcon/chat.png'),
+                    time:"2018-12-13 20:31",
+                    unReadNum:10,
+                    noNotice:true
+                }]
+            })
+        });
     }
 
     static navigationOptions = {
-        title: '聊天',
+        title: '聊天'
     };
 
     render() {
         return (
             <View style={styles.container}>
-                <StatusBar
-                    translucent={false}
-                    hidden={false}
-                    animated={true}
-                    barStyle={'light-content'}
-                    ref={(c) => this.statusBar = c}
-                    backgroundColor={'black'}
-                    StatusBarAnimation={'slide  '}
-                />
+            <StatusBar
+                translucent={false}
+                hidden={false}
+                animated={true}
+                barStyle={'light-content'}
+                ref={(c) => this.statusBar = c}
+                backgroundColor={'black'}
+                StatusBarAnimation={'slide  '}
+            />
                 <FlatList
                     data={this.state.ChatList}
                     renderItem={({item}) => this._renderRowListView(item)}
@@ -61,11 +84,11 @@ export default class HomeScreen extends React.Component {
     }
 
     _renderRowListView(rowData){
-        //const { navigate } = this.props.navigation;
+        const { navigation } = this.props;
         return (
                 <View style={{marginTop:2,height:70,borderBottomWidth:1,borderBottomColor:"#ccc",marginLeft:10,marginRight:10}} key={rowData.id}>
                     <TouchableOpacity style={styles.message} onPress={() => {
-                        navigate("Chat",{rowData:rowData });
+                        navigation.push("Chat",{rowData:rowData });
                     }}>
                         <View style={{flex: 1, flexDirection:"row",height:60,alignItems:'center',justifyContent: 'space-between',}}>
                             <View style={{flexDirection:"row",}}>

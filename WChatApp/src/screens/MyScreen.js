@@ -8,7 +8,16 @@ export default class MyScreen extends React.Component{
 
     render(){
         return(
-            <View></View>
+            <View>
+            <StatusBar
+                translucent={false}
+                hidden={false}
+                animated={true}
+                barStyle={'light-content'}
+                ref={(c) => this.statusBar = c}
+                backgroundColor={'black'}
+                StatusBarAnimation={'slide  '}
+            /></View>
         )
     }
     static navigationOptions = {

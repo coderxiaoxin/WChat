@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Text, View,StyleSheet } from 'react-native';
+import { Text, View,StyleSheet,StatusBar } from 'react-native';
 
 export default class ContactScreen extends React.Component{
     constructor(props){
@@ -13,6 +13,15 @@ export default class ContactScreen extends React.Component{
     render(){
         return(
             <View style={styles.contairs}>
+            <StatusBar
+                translucent={false}
+                hidden={false}
+                animated={true}
+                barStyle={'light-content'}
+                ref={(c) => this.statusBar = c}
+                backgroundColor={'black'}
+                StatusBarAnimation={'slide  '}
+            />
                 <Text>123</Text>
                 </View>
         )
