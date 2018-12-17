@@ -29,7 +29,9 @@ namespace WChatServer
             services.AddMvc();
             var connectstring = Configuration.GetConnectionString("WChat");
             services.AddDbContext<WChatDbContext>(options=> {
-                options.UseMySQL(connectstring);
+                options.UseMySQL(connectstring,builder=> {
+                    builder.MigrationsAssembly("WChatServer");
+                });
             });
             var AliPush = Configuration.GetSection("AliPush");
             var AppId = AliPush.GetValue<long>("AppId");
