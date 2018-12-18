@@ -9,7 +9,7 @@ using WChatDb;
 namespace WChatServer.Migrations
 {
     [DbContext(typeof(WChatDbContext))]
-    [Migration("20181217142805_init")]
+    [Migration("20181218133407_init")]
     partial class init
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
