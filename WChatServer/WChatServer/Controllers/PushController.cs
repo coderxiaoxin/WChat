@@ -58,5 +58,10 @@ namespace WChatServer.Controllers
             });
         }
 
+        public async Task<IActionResult> SetUserDevice()
+        {
+
+        }
+
     }
 }

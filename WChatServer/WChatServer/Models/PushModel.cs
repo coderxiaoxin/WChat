@@ -7,8 +7,8 @@ namespace WChatServer.Models
 {
     public enum PushType
     {
-        All=0,
-        Account=1
+        All = 0,
+        Account = 1
     }
 
     public class PushModel
@@ -29,5 +29,10 @@ namespace WChatServer.Models
         /// 消息内容
         /// </summary>
         public string Msg { get; set; }
+    }
+
+    public class UserDeviceModel
+    {
+        public string DeviceId { get; set; }
     }
 }

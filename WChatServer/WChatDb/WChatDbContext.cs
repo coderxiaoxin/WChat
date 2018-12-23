@@ -29,5 +29,9 @@ namespace WChatDb
         /// 账号额外信息
         /// </summary>
         public virtual DbSet<AccountDetail> AccountDetails { get; set; }
+        /// <summary>
+        /// 用户设备
+        /// </summary>
+        public virtual DbSet<Device> Devices { get; set; }
     }
 }
