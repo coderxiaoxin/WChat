@@ -21,7 +21,7 @@ export default AppNavigator = createStackNavigator({
       screenInterpolator: CardStackStyleInterpolator.forHorizontal
     }),
     navigationOptions: (options) => {
-      console.log(options);
+      //console.log(options);
       return {
         title:options.navigation.state.routeName,
         headerStyle: {

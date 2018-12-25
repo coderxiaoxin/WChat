@@ -34,5 +34,7 @@ namespace WChatServer.Models
     public class UserDeviceModel
     {
         public string DeviceId { get; set; }
+
+        public Guid UserId { get; set; }
     }
 }
