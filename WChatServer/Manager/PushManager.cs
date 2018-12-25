@@ -8,7 +8,7 @@ namespace Manager
 {
     public class PushManager
     {
-        public PushManager(List<IPushStore> pushStores)
+        public PushManager(IEnumerable<IPushStore> pushStores)
         {
             this.pushStores = pushStores;
         }
@@ -18,7 +18,7 @@ namespace Manager
             this.pushStores = new List<IPushStore>();
         }
 
-        public List<IPushStore> pushStores { get; set; }
+        public IEnumerable<IPushStore> pushStores { get; set; }
 
         public async Task Push(string Account, string Title, string Content)
         {
