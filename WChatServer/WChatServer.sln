@@ -13,7 +13,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DAL", "DAL\DAL.csproj", "{9
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WChatDb", "WChatDb\WChatDb.csproj", "{D9B4A0C5-F917-49CB-829C-863EE277B197}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RedisSession", "RedisSession\RedisSession.csproj", "{E84DF011-7285-477A-92C7-26F2A040545B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RedisSession", "RedisSession\RedisSession.csproj", "{E84DF011-7285-477A-92C7-26F2A040545B}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HttpHelp", "..\..\..\..\OneDrive\vs项目\HttpHelp\HttpHelp\HttpHelp.csproj", "{994F6C4F-60E1-4E87-ACB0-6394E712876A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -45,6 +47,10 @@ Global
 		{E84DF011-7285-477A-92C7-26F2A040545B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E84DF011-7285-477A-92C7-26F2A040545B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E84DF011-7285-477A-92C7-26F2A040545B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{994F6C4F-60E1-4E87-ACB0-6394E712876A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{994F6C4F-60E1-4E87-ACB0-6394E712876A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{994F6C4F-60E1-4E87-ACB0-6394E712876A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{994F6C4F-60E1-4E87-ACB0-6394E712876A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
