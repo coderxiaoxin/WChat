@@ -37,7 +37,7 @@ namespace WChatServer.Controllers
         /// 推送消息
         /// </summary>
         /// <returns></returns>
-        [ApiAuthAttrbute]
+        //[ApiAuthAttrbute]
         public async Task<IActionResult> Push(PushModel model)
         {
             if (ModelState.IsValid)

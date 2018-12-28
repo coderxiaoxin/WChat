@@ -39,7 +39,21 @@ namespace WChatServer
             var AccessKeyId = AliPush.GetValue<string>("AccessKeyId");
             var AccessKeySecret = AliPush.GetValue<string>("AccessKeySecret");
             var RegionId = AliPush.GetValue<string>("RegionId");
+            //AppPushConfig appPushConfig = new AppPushConfig()
+            //{
+            //    AppKey = AppId,
+            //    RamAccessKeyId = AccessKeyId,
+            //    RamAccessKeySecret = AccessKeySecret,
+            //    Region_Id = RegionId
+            //};
+            services.AddSingleton(options => new AppPushConfig() {
+                AppKey = AppId,
+                RamAccessKeyId = AccessKeyId,
+                RamAccessKeySecret = AccessKeySecret,
+                Region_Id = RegionId
+            });
             services.AddScoped<IPushStore, AppPushStore>();
+            services.AddScoped<IPushStore, ExpoAppPushStore>();
             services.AddScoped<PushManager>();
             
         }
