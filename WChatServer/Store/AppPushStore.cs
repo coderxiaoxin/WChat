@@ -20,13 +20,13 @@ namespace Store
         /// <param name="RamAccessKeySecret">RAM账号的密钥</param>
         /// <param name="Region_Id">最近区域ID</param>
         /// <param name="AppKey">对应App的key</param>
-        public AppPushStore(WChatDbContext context,string RamAccessKeyId, string RamAccessKeySecret,string Region_Id, long AppKey)
+        public AppPushStore(WChatDbContext context, AppPushConfig appPushConfig)
         {
             this.context = context;
-            this.AppKey = AppKey;
-            this.RamAccessKeyId = RamAccessKeyId;
-            this.RamAccessKeySecret = RamAccessKeySecret;
-            this.Region_Id = Region_Id;
+            this.AppKey = appPushConfig.AppKey;
+            this.RamAccessKeyId = appPushConfig.RamAccessKeyId;
+            this.RamAccessKeySecret = appPushConfig.RamAccessKeySecret;
+            this.Region_Id = appPushConfig.Region_Id;
         }
         /// <summary>
         /// 创建App推送工厂，并使用日志服务
@@ -37,13 +37,13 @@ namespace Store
         /// <param name="Region_Id">最近区域ID</param>
         /// <param name="AppKey">对应App的key</param>
         /// <param name="logStore">日志服务</param>
-        public AppPushStore(WChatDbContext context, string RamAccessKeyId, string RamAccessKeySecret, string Region_Id, long AppKey,ILogStore logStore)
+        public AppPushStore(WChatDbContext context, AppPushConfig appPushConfig, ILogStore logStore)
         {
             this.context = context;
-            this.AppKey = AppKey;
-            this.RamAccessKeyId = RamAccessKeyId;
-            this.RamAccessKeySecret = RamAccessKeySecret;
-            this.Region_Id = Region_Id;
+            this.AppKey = appPushConfig.AppKey;
+            this.RamAccessKeyId = appPushConfig.RamAccessKeyId;
+            this.RamAccessKeySecret = appPushConfig.RamAccessKeySecret;
+            this.Region_Id = appPushConfig.Region_Id;
             this.logStore = logStore;
         }
 
@@ -128,5 +128,14 @@ namespace Store
                 logStore?.Error(Tag, ex.ToString());
             }
         }
+    }
+
+
+    public class AppPushConfig
+    {
+        public string RamAccessKeyId { get; set; }
+        public string RamAccessKeySecret { get; set; }
+        public string Region_Id { get; set; }
+        public long AppKey { get; set; }
     }
 }
